@@ -14,7 +14,7 @@ sudo apt-get install -y gnome-mahjongg
 
 echo "Installing python..."
 
-sudo apt-get install python3 python3-pip 
+sudo apt-get install -y python3 python3-pip 
 
 
 echo "Setting up syd"
