@@ -30,3 +30,13 @@ sudo cp pull.sh /usr/bin/pull
 
 git config --global user.email "tarcisio_marinho09@hotmail.com"
 git config --global user.name "tarcisio-marinho"
+
+cd ..
+
+rm -rf syd
+
+echo "Installing Projects..."
+
+cd /home/tarcisio/Desktop/
+git clone https://github.com/tarcisio-marinho/GonnaCry.git
+git clone https://github.com/tarcisio-marinho/RSB-Framework.git
