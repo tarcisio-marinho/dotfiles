@@ -40,3 +40,15 @@ echo "Installing Projects..."
 cd /home/tarcisio/Desktop/
 git clone https://github.com/tarcisio-marinho/GonnaCry.git
 git clone https://github.com/tarcisio-marinho/RSB-Framework.git
+git clone https://github.com/tarcisio-marinho/ML.git
+
+echo "Installing packages from pip"
+
+sudo pip3 install sklearn
+sudo pip3 install requests
+sudo pip3 install matplotlib
+sudo pip3 install numpy
+sudo pip3 install pandas
+
+
+
