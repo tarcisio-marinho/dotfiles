@@ -51,4 +51,4 @@ sudo pip3 install numpy
 sudo pip3 install pandas
 
 
-
+sudo apt-get install indicator-multiloader
