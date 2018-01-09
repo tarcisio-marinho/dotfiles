@@ -50,6 +50,6 @@ sudo pip3 install matplotlib
 sudo pip3 install numpy
 sudo pip3 install pandas
 sudo pip3 install jupyter
-sudo apt-get install python3-tk
+sudo apt-get install -y python3-tk
 
 sudo apt-get install indicator-multiloader
