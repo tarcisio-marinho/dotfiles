@@ -52,5 +52,7 @@ sudo pip3 install pandas
 sudo pip3 install jupyter
 sudo pip3 install tensorflow
 sudo apt-get install -y python3-tk
+sudo pip3 install bpython
+sudo pip3 install ptpython
 
 sudo apt-get install indicator-multiloader
