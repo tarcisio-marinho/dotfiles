@@ -11,12 +11,27 @@ sudo apt-get install -y gnome-tweak-tool gnome-calculator gnome-sudoku gnome-che
 sudo apt-get install -y gnome-mahjongg 
 sudo apt-get install fish
 curl -L https://get.oh-my.fish | fish
+sudo apt-get install indicator-multiloader
 
 
 echo "Installing python..."
 
 sudo apt-get install -y python3 python3-pip 
+sudo apt-get install -y python python-pip
 
+echo "Installing packages from pip"
+
+sudo pip3 install sklearn
+sudo pip3 install requests
+sudo pip3 install matplotlib
+sudo pip3 install numpy
+sudo pip3 install pandas
+sudo pip3 install jupyter
+sudo pip3 install tensorflow
+sudo apt-get install -y python3-tk
+sudo pip3 install bpython
+sudo pip3 install ptpython
+sudo pip install pyinstaller
 
 echo "Setting up syd"
 
@@ -38,25 +53,28 @@ rm -rf syd
 
 echo "Installing Projects..."
 
-cd /home/tarcisio/Desktop/
+cd ~/Desktop/
 git clone https://github.com/tarcisio-marinho/GonnaCry.git
 git clone https://github.com/tarcisio-marinho/RSB-Framework.git
 git clone https://github.com/tarcisio-marinho/ML.git
+git clone https://github.com/tarcisio-marinho/KeepSecret.git
+git clone https://github.com/tarcisio-marinho/Music-Downloader.git
 
-echo "Installing packages from pip"
 
-sudo pip3 install sklearn
-sudo pip3 install requests
-sudo pip3 install matplotlib
-sudo pip3 install numpy
-sudo pip3 install pandas
-sudo pip3 install jupyter
-sudo pip3 install tensorflow
-sudo apt-get install -y python3-tk
-sudo pip3 install bpython
-sudo pip3 install ptpython
+echo "Installing KS"
+cd KeepSecret/
+sudo pip install -r requeriments
+pyinstaller -F --clean main.py -n ks
+sudo cp dist/ks /usr/bin/ks
+cd ~Desktop/
 
-sudo apt-get install indicator-multiloader
+
+echo "Installing Music-Downloader"
+cd Music-Downloader/
+sh requeriments.sh
+pyinstaller -F --clean main.py -n download
+sudo cp download /usr/bin/
+
 
 echo "setting up fish as default shell"
 
