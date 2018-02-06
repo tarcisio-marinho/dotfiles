@@ -9,7 +9,8 @@ echo "Installing basic stuff..."
 sudo apt-get install -y gcc audacious g++ vim nano gedit firefox git gdb codeblocks htop
 sudo apt-get install -y gnome-tweak-tool gnome-calculator gnome-sudoku gnome-chess 
 sudo apt-get install -y gnome-mahjongg 
-
+sudo apt-get install fish
+curl -L https://get.oh-my.fish | fish
 
 
 echo "Installing python..."
@@ -56,3 +57,7 @@ sudo pip3 install bpython
 sudo pip3 install ptpython
 
 sudo apt-get install indicator-multiloader
+
+echo "setting up fish as default shell"
+
+echo "which fish >/dev/null 2>&1 && exec fish -il" >> ~/.bashrc
