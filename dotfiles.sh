@@ -63,10 +63,10 @@ git clone https://github.com/tarcisio-marinho/Music-Downloader.git
 
 echo "Installing KS"
 cd KeepSecret/
-sudo pip install -r requeriments
+sudo pip install -r requeriments.txt
 pyinstaller -F --clean main.py -n ks
 sudo cp dist/ks /usr/bin/ks
-cd ~Desktop/
+cd ~/Desktop/
 
 
 echo "Installing Music-Downloader"
