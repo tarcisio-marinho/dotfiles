@@ -73,7 +73,7 @@ echo "Installing Music-Downloader"
 cd Music-Downloader/
 sh requeriments.sh
 pyinstaller -F --clean main.py -n download
-sudo cp download /usr/bin/
+sudo cp dist/download /usr/bin/
 
 
 echo "setting up fish as default shell"
