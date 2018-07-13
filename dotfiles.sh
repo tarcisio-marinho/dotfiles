@@ -80,3 +80,5 @@ echo "setting up fish as default shell"
 
 echo "which fish >/dev/null 2>&1 && exec fish -il" >> ~/.bashrc
 echo 'alias ".." "cd .."' >> ~/.bashrc
+
+git config credential.helper store
