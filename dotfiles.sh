@@ -8,10 +8,9 @@ echo "Installing basic stuff..."
 
 sudo apt-get install -y gcc audacious g++ vim nano gedit firefox git gdb codeblocks htop
 sudo apt-get install -y gnome-tweak-tool gnome-calculator gnome-sudoku gnome-chess 
-sudo apt-get install -y gnome-mahjongg 
+sudo apt-get install -y gnome-mahjongg terminator
 sudo apt-get install fish
 curl -L https://get.oh-my.fish | fish
-sudo apt-get install indicator-multiloader
 
 
 echo "Installing python..."
@@ -41,6 +40,7 @@ cd syd
 gcc syd.c -o syd
 chmod 777 syd pull.sh
 
+sudo cp clone /usr/bin/
 sudo cp syd /usr/bin/
 sudo cp pull.sh /usr/bin/pull
 
@@ -51,15 +51,6 @@ cd ..
 
 rm -rf syd
 
-echo "Installing Projects..."
-
-cd ~/Desktop/
-git clone https://github.com/tarcisio-marinho/GonnaCry.git
-git clone https://github.com/tarcisio-marinho/RSB-Framework.git
-git clone https://github.com/tarcisio-marinho/ML.git
-git clone https://github.com/tarcisio-marinho/KeepSecret.git
-git clone https://github.com/tarcisio-marinho/Music-Downloader.git
-
 
 echo "Installing KS"
 cd KeepSecret/
@@ -69,16 +60,12 @@ sudo cp dist/ks /usr/bin/ks
 cd ~/Desktop/
 
 
-echo "Installing Music-Downloader"
-cd Music-Downloader/
-sh requeriments.sh
-pyinstaller -F --clean main.py -n download
-sudo cp dist/download /usr/bin/
-
 
 echo "setting up fish as default shell"
 
 echo "which fish >/dev/null 2>&1 && exec fish -il" >> ~/.bashrc
 echo 'alias ".." "cd .."' >> ~/.bashrc
 
-git config credential.helper store
+
+sudo update-alternatives --install /usr/bin/python python /usr/bin/python3.6 2
+sudo update-alternatives --config python
